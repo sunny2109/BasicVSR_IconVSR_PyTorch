@@ -1,0 +1,46 @@
+name: EDVR_M_x4_SR_REDS_official
+model_type: EDVRModel
+scale: 4
+num_gpu: 4  # set num_gpu: 0 for cpu mode
+manual_seed: 0
+
+datasets:
+  test:
+    name: REDS_val
+    type: REDSRecurrentDataset
+    dataroot_gt: datasets/REDS/val/train_sharp
+    dataroot_lq: datasets/REDS/val/train_sharp_bicubic/X4
+    meta_info_file: basicsr/data/meta_info/meta_info_REDS_GT.txt
+    val_partition: official  # set to 'official' when use the official validation partition
+    io_backend:
+      type: disk
+
+    is_train: false
+    num_frame: 100
+    gt_size: 512
+    interval_list: [1]
+    random_reverse: false
+    use_flip: false
+    use_rot: false
+
+# network structures
+network_g:
+  type: BasicVSR
+  num_feat: 64
+  num_block: 30
+
+# path
+path:
+  pretrain_network_g: experiments/pretrained_models/EDVR/EDVR_M_x4_SR_REDS_official-32075921.pth
+  strict_load_g: true
+
+# validation settings
+val:
+  save_img: true
+  suffix: ~  # add suffix to saved images, if None, use exp name
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: false
