@@ -6,18 +6,18 @@ manual_seed: 0
 
 datasets:
   test:
-    name: REDS_val
+    name: REDS4
     type: REDSRecurrentDataset
-    dataroot_gt: datasets/REDS/val/train_sharp
-    dataroot_lq: datasets/REDS/val/train_sharp_bicubic/X4
+    dataroot_gt: /root/proj/Datasets/REDS/sharp_data/train_sharp    #val_sharp
+    dataroot_lq: /root/proj/Datasets/REDS/bicubic_data/train_sharp_bicubic/X4    #val_sharp_bicubic/X4
     meta_info_file: basicsr/data/meta_info/meta_info_REDS_GT.txt
-    val_partition: official  # set to 'official' when use the official validation partition
+    val_partition: REDS4  # set to 'official' when use the official validation partition
     io_backend:
       type: disk
 
     is_train: false
     num_frame: 100
-    gt_size: 512
+    gt_size: ~
     interval_list: [1]
     random_reverse: false
     use_flip: false
@@ -31,7 +31,7 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: experiments/pretrained_models/EDVR/EDVR_M_x4_SR_REDS_official-32075921.pth
+  pretrain_network_g: experiments/BasicVSR_REDS_Sharp_BI_nf15b8_x4/models/net_g_300000.pth
   strict_load_g: true
 
 # validation settings
