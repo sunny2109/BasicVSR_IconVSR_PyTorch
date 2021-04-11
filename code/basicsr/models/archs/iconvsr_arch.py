@@ -20,8 +20,6 @@ class IconVSR(nn.Module):
             the sequence. 2 for REDS and 3 for Vimeo-90K. Default: 2
         spynet_path (str): The path of Pre-trained SPyNet model.
             Default: None.
-        edvr_path (str): The path of Pre-trained EDVR model (for refill).
-            Default: None.
     """
     def __init__(self, 
                       num_feat=64, num_block=30, 
