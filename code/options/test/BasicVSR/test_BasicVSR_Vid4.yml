@@ -21,7 +21,7 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: experiments/BasicVSR_REDS_Sharp_BI_nf15b8_x4/models/net_g_245000.pth
+  pretrain_network_g: experiments/BasicVSR_REDS_Sharp_BI_nf15b8_x4/models/net_g_300000.pth
   strict_load_g: true
 
 # validation settings
