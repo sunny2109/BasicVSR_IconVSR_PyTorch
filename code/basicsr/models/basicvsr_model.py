@@ -96,8 +96,9 @@ class BasicVSRModel(VideoBaseModel):
         pbar = tqdm(total=len(dataloader), unit='image', ascii=True)
 
         for idx, val_data in enumerate(dataloader):
-            val_data['key'] = val_data['key'][0]
-            clip_name = val_data['key'].split('/')[0]
+            # val_data['key'] = val_data['key'][0]
+            # clip_name = val_data['key'].split('/')[0]
+            clip_name = val_data['clip_name'][0]
             self.feed_data(val_data)
             self.test()
 
