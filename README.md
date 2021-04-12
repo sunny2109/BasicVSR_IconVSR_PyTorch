@@ -1,5 +1,6 @@
 ##  Dependencies and Installation
 - The code is based on [BasicSR](https://github.com/xinntao/BasicSR), please follow the requirements of BasicSR.
+- Pytorch=1.51
 
 ## PSNR Results
 It takes about 5 days to train the BasicVSR/IconVSR model on 2 V100 GPUs.
