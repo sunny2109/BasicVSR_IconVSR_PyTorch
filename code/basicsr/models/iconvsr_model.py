@@ -5,7 +5,7 @@ import importlib
 from tqdm import tqdm
 import torch
 from torch.nn.parallel import DistributedDataParallel
-from basicsr.models.basicvsr_model import BasicVSRModel
+from basicsr.models.basicvsr_model import VideoBaseModel, BasicVSRModel
 from basicsr.utils import imwrite, tensor2img
 from basicsr.utils.dist_util import get_dist_info
 
