@@ -4,12 +4,16 @@
 
 ##  Training
 ```bash
+cd ./code
+
 CUDA_VISIBLE_DEVICES=0,1 python basicsr/train.py -opt options/train/BasicVSR/train_BasicVSR.yml
 
 CUDA_VISIBLE_DEVICES=0,1 python basicsr/train.py -opt options/train/BasicVSR/train_IconVSR.yml
 ```
 ## Testing
 ```bash
+cd ./code
+
 CUDA_VISIBLE_DEVICES=0 python basicsr/test.py -opt options/test/BasicVSR/test_BasicVSR_REDS.yml
 
 CUDA_VISIBLE_DEVICES=0 python basicsr/test.py -opt options/test/BasicVSR/test_BasicVSR_Vid4.yml
@@ -22,3 +26,5 @@ It takes about 5 days to train the BasicVSR/IconVSR model on 2 V100 GPUs.
 | :----- | :-----: | :-----: | :-----: | :-----: | 
 | REDS4 | 31.42 | 31.4096 | - | - |
 | Vid4 | 27.24 |27.2693| - | - |
+
+- Pretrained models and SR results can be downloaded [Here]().
