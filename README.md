@@ -27,4 +27,4 @@ It takes about 5 days to train the BasicVSR/IconVSR model with the [REDS](https:
 | REDS4 | 31.42/0.8909 | 31.409/0.8907| - | - |
 | Vid4 | 27.24/0.8251 |27.269/0.8311| - | - |
 
-- Pretrained models and SR results can be downloaded [Here]().
+- Pretrained models and SR results can be downloaded [Here](https://drive.google.com/file/d/1zE_EJ9S67GSL_FcaaeOZTfZdHyofoZzY/view?usp=sharing).
