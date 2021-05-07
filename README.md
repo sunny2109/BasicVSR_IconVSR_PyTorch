@@ -22,9 +22,9 @@ CUDA_VISIBLE_DEVICES=0 python basicsr/test.py -opt options/test/BasicVSR/test_Ba
 ## PSNR/SSIM Results
 It takes about 5 days to train the BasicVSR/IconVSR model with the [REDS](https://seungjunnah.github.io/Datasets/reds) dataset on 2 V100 GPUs.
 
-| Dataset(BI) | BasicVSR (paper) | Ours |IconVSR (paper) | Ours |
+| Dataset(BI) | BasicVSR (paper) | Ours |IconVSR_w/o Refill (paper) | Ours |
 | :----- | :-----: | :-----: | :-----: | :-----: | 
-| REDS4 | 31.42/0.8909 | 31.409/0.8907| - | - |
+| REDS4 | 31.42/0.8909 | 31.409/0.8907| 31.60 | 31.6026 |
 | Vid4 | 27.24/0.8251 |27.269/0.8311| - | - |
 
 - Pretrained models and SR results can be downloaded [Here](https://drive.google.com/file/d/1zE_EJ9S67GSL_FcaaeOZTfZdHyofoZzY/view?usp=sharing).
