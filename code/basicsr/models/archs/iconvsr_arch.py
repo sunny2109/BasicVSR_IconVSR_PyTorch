@@ -42,7 +42,7 @@ class IconVSR(nn.Module):
         self.backward_resblocks = ConvResBlock(num_feat + 3, num_feat, num_block)
 
         self.forward_fuse = nn.Conv2d(num_feat * 2, num_feat, kernel_size=3, stride=1, padding=1, bias=True)
-        self.forward_resblocks = ConvResBlock(num_feat + 3, num_feat, num_block)
+        self.forward_resblocks = ConvResBlock(num_feat * 2 + 3, num_feat, num_block)
 
         # Pixel-Shuffle Upsampling
         self.up1 = PSUpsample(num_feat, num_feat, scale_factor=2)
