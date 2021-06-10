@@ -1,5 +1,5 @@
 ##  Dependencies and Installation
-- The code is based on [BasicSR](https://github.com/xinntao/BasicSR), Please install the BasicSR framework first.
+- The code is based on the old version of [BasicSR](https://github.com/xinntao/BasicSR/tree/update_niqe), Please install the BasicSR framework first.
 - Pytorch=1.51
 
 ##  Training
